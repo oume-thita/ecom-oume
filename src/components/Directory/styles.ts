@@ -17,7 +17,7 @@ export const Directory = styled.main`
             background-repeat: no-repeat;
             background-size: cover;
 
-        .item:after {
+        ::after {
             content: '';
             position: absolute;
             top: 0; left: 0;
