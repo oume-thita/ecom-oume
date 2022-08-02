@@ -1,18 +1,34 @@
-import React from "react";
-import * as S from './styles'
+import React from "react"
+// import { IFormInput } from "../../../types"
+import * as S from "./styles"
 
-const FormInput = ({handleChange, label, ...otherProps}:any) => {
-    return (
-        <S.FormRow>
-            {label && (
-                <label>
-                    {label}
-                </label>
-            )}
+interface FormProps {
+  label?: string
+  //   form: IFormInput
+  handleChange?: any
+  type: string
+  name: string
+  value: { value: string }
+  placeholder: string
+  onChange: any
+}
 
-            <input className="formInput" onChange={handleChange} {...otherProps} />
-        </S.FormRow>
-    );
+const FormInput: React.FC<FormProps> = ({
+  handleChange,
+  label,
+  type,
+  name,
+  value,
+  onChange,
+  ...otherProps
+}: FormProps) => {
+  return (
+    <S.FormRow>
+      {label && <label>{label}</label>}
+
+      <input className="formInput" onChange={handleChange} {...otherProps} />
+    </S.FormRow>
+  )
 }
 
 export default FormInput
