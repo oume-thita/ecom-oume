@@ -1,8 +1,9 @@
-import userTypes from "./user.type";
+import userTypes from "./user.type"
 
-export const setCurrentUser = (user:any) => ({
-    type: userTypes.SET_CURRENT_USER,
-    payload: user
+export const setCurrentUser = (user: any) => ({
+  type: userTypes.SET_CURRENT_USER,
+  payload: user,
 })
 
 // export type Action = typeof setCurrentUser
+// export type RootState = ReturnType<typeof store.getState>
